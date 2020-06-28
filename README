@@ -1,0 +1,1 @@
+This rep contains one .R file that downloads data and preforms an analysis for the Coursera Getting and Cleaning Data R Course. I downloads the data, reads the data, merges it into a single table, and then finds the average of each variable grouped by id variables
