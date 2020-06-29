@@ -39,4 +39,4 @@ alldata$subject <- as.factor(alldata$subject)
 
 ## Create new data frame with averages
 meansdata <- summarise_at(alldata, 3:ncol(alldata), mean)
-
+write.table(meansdata, file = "meansdata.txt", row.names = FALSE)
