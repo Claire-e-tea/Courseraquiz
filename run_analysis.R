@@ -38,5 +38,6 @@ alldata$activity <- factor(alldata$activity, levels = 1:6, labels = activity[ , 
 alldata$subject <- as.factor(alldata$subject)
 
 ## Create new data frame with averages
-meansdata <- summarise_at(alldata, 3:ncol(alldata), mean)
+gdata <- group_by(alldata, activity, subject)
+meansdata <- summarise_all(gdata, mean)
 write.table(meansdata, file = "meansdata.txt", row.names = FALSE)
